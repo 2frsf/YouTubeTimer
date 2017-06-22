@@ -1,0 +1,26 @@
+{
+
+  "manifest_version": 2,
+  "name": "YoutubeTime",
+  "version": "1.0",
+
+  "description": "This extension counts how much time the user spent on YouTube",
+  "homepage_url": "https://2frsf.github.io/website/",
+
+  "icons": {
+    "96": "icons/YYTBT-96.png"
+  },
+
+  "browser_action": {
+    "default_icon": "icons/menu-38.png",
+    "default_title": "YouTubeTime",
+    "default_popup": "popup/menu.html"
+  },
+
+  "content_scripts": [ {
+        "matches": ["*://www.youtube.com/*"],
+        "js": ["counter.js"]
+      }
+    ]
+
+}
